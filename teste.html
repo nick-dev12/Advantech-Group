@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entreprise Numérique Gabon</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+        }
+        
+        .header .logo img {
+            max-width: 150px;
+        }
+        
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        
+        .nav ul li a:hover {
+            color: #f39c12;
+        }
+        
+        .hero {
+            background: url('images/hero.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .hero .btn-primary, .hero .btn-secondary {
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .hero .btn-primary {
+            background-color: #f39c12;
+        }
+        
+        .hero .btn-primary:hover {
+            background-color: #e67e22;
+        }
+        
+        .hero .btn-secondary {
+            background-color: #34495e;
+        }
+        
+        .hero .btn-secondary:hover {
+            background-color: #2c3e50;
+        }
+        
+        .trusted, .services, .projects, .team {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .services .container, .projects .container, .team .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .service, .project, .team-member {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            width: 30%;
+        }
+        
+        .service h3, .project h3, .team-member h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .service p, .project p, .team-member p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .project img, .team-member img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0;
+        }
+        
+        .footer .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        
+        .footer .footer-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .footer .footer-links .footer-column {
+            width: 30%;
+        }
+        
+        .footer .footer-links .footer-column h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .footer .footer-links .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer .footer-links .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer .footer-links .footer-column ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        
+        .footer .footer-links .footer-column ul li a:hover {
+            color: #f39c12;
+        }
+        
+        .footer .footer-social {
+            margin-bottom: 20px;
+        }
+        
+        .footer .footer-social a {
+            margin: 0 10px;
+        }
+        
+        .footer .footer-social img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .footer .footer-social a:hover img {
+            transform: scale(1.2);
+        }
+        
+        .footer .footer-copy {
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .container {
+                width: 100%;
+                padding: 0 20px;
+            }
+        
+            .services .container, .projects .container, .team .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .service, .project, .team-member {
+                width: 100%;
+                margin: 10px 0;
+            }
+        
+            .footer .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .footer .footer-links .footer-column {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo de l'entreprise" />
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Financial planning for entrepreneurs</h1>
+            <p>
+                Fundocean made financial planning deliver financial strategies for
+                life.
+            </p>
+            <a href="#" class="btn-primary">Explore Our Services</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Trusted Section -->
+    <section class="trusted">
+        <div class="container">
+            <h2>
+                Trusted to help guide individuals and entrepreneurs make better
+                financial decisions.
+            </h2>
+            <p>
+                Our financial planning services incorporate a highly customized
+                approach to working with each client, taking the time to understand
+                your unique financial goals.
+            </p>
+            <a href="#" class="btn-primary">Make an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="service">
+                <h3>Audit & assurance</h3>
+                <p>
+                    We offer a range of audit and assurance services to help you
+                    navigate the challenges of today.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Business services</h3>
+                <p>
+                    Our business services are designed to help you achieve your business
+                    goals and objectives.
+                </p>
+            </div>
+            <div class="service">
+                <h3>IT control solutions</h3>
+                <p>
+                    We provide IT control solutions to ensure the security and
+                    reliability of your business systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Our project</h2>
+            <div class="project">
+                <img src="images/project1.jpg" alt="Projet 1" />
+                <h3>Financial Planning</h3>
+                <p>
+                    Comprehensive financial planning services to meet your individual
+                    needs.
+                </p>
+                <a href="#" class="btn-secondary">Read More</a>
+            </div>
+            <div class="project">
+                <img src="images/project2.jpg" alt="Projet 2" />
+                <h3>Mutual Funds</h3>
+                <p>
+                    Diversified mutual fund options to suit your investment strategy.
+                </p>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+            <div class="project">
+                <img src="images/project3.jpg" alt="Projet 3" />
+                <h3>Investment Planning</h3>
+                <p>
+                    Strategic investment planning to help you achieve long-term
+                    financial success.
+                </p>
+                <a href="#" class="btn-secondary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<section class="team" id="team">
+    <div class="container">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="images/team1.jpg" alt="Membre de l'équipe 1">
+            <h3>Corneille Claudien</h3>
+            <p>Marketing Manager</p>
+            <p>Expert in digital marketing strategies and brand development.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team2.jpg" alt="Membre de l'équipe 2">
+            <h3>Lester S. Grimsby</h3>
+            <p>Financial Consultant</p>
+            <p>Specialist in financial consulting with over 10 years of experience.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/team3.jpg" alt="Membre de l'équipe 3">
+            <h3>Daniel Schenk</h3>
+            <p>IT Specialist</p>
+            <p>Expert in IT control solutions and cybersecurity.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Logo de l'entreprise">
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Our Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">White Papers</a></li>
+                    <li><a href="#">Guides</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>For Individuals</h3>
+                <ul>
+                    <li><a href="#">Personal Finance</a></li>
+                    <li><a href="#">Wealth Management</a></li>
+                    <li><a href="#">Retirement Planning</a></li>
+                    <li><a href="#">Insurance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 Entreprise Numérique Gabon. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+
+</body>
+
+</html>
