@@ -1,0 +1,290 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #1f3c88;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .company-name {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: italic;
+    color: #b0c6f8;
+}
+
+/* Section About Us */
+section#about-us {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+section#about-us h2 {
+    font-size: 32px;
+    color: #1f3c88;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section#about-us h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #1f3c88;
+    display: block;
+    margin: 10px auto;
+}
+section#about-us h3 {
+    font-size: 20px;
+    color: #487cff;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border-bottom: 7px solid #487cff;
+    padding-bottom: 10px;
+    border-left: 7px solid #487cff;
+    border-right: 7px solid #487cff;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+section#about-us p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+section#about-us ul {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+section#about-us ul li {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+/* Section Values */
+section#our-values {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+    text-align: left;
+}
+
+section#our-values h2 {
+    color: #1f3c88;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#our-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section#our-values ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+section#our-values ul li strong {
+    color: #1f3c88;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+section#our-values ul li::before {
+    content: '✓';
+    color: #1f3c88;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Section Team */
+section#team {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+section#team h2 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 30px;
+}
+
+.team-member {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member h3 {
+    color: #1f3c88;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Section Services */
+section#services {
+    background-color: #1f3c88;
+    color: white;
+    padding: 60px 0;
+}
+
+section#services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+section#services ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+section#services ul li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #b0c6f8;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 650px) {
+    /* Responsive Grid for Team Section */
+    section#team .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    section#our-values ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+  
+}
+@media (max-width: 650px){
+    section#about-us p {
+        margin: 15px 0;
+        font-size: 13px;
+        color: #555;
+        line-height: 1.8;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    section#about-us ul {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    section#about-us ul li {
+        font-size: 13px;
+    }
+
+
+
+
+
+    section#our-values {
+        background-color: #f1f1f1;
+        padding: 40px 0;
+        text-align: left;
+    }
+    
+    section#our-values h2 {
+        color: #1f3c88;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    section#our-values ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    section#our-values ul li {
+        margin-bottom: 15px;
+        font-size: 13px;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    section#our-values ul li strong {
+        color: #1f3c88;
+        margin-right: 10px;
+        font-weight: 600;
+    }
+    
+    section#our-values ul li::before {
+        content: '✓';
+        color: #1f3c88;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+}
